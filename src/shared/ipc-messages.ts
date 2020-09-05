@@ -1,7 +1,10 @@
+export type Platform = 'twitch' | 'trovo';
+
 export default interface IpcMessages {
-    setName: {
+    getUserByName: {
         payload: {
-            name: string
+            platformId: Platform,
+            username: string
         }
     },
     foo: {
